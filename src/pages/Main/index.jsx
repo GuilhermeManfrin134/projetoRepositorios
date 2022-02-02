@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { Container, Form, SubmitButton, List, DeleteButton } from "./styles";
 
@@ -105,9 +106,9 @@ export default function Main(){
                                 </DeleteButton>
                                 {repo.name}
                             </span>
-                                <a href="">
+                                <Link to={`/repositorio/${encodeURIComponent(repo.name)}`}>
                                     <FaBars size={20}/>
-                                </a>
+                                </Link>
                             </li>
                     ))}
                 </List>        
